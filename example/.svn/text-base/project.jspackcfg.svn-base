@@ -1,0 +1,35 @@
+{
+	"nolint": [
+		"jquery",
+		"polyfiller"
+	],
+	"nopack": [],
+	"includeSmallLoader": [
+		"__base-modules",
+		"__enhanced-modules"
+	],
+	"packageList": {
+		"__basic-behaviour": [
+			"libs/jquery"
+		],
+		"__base-modules": [
+			"libs/modernizr.custom",
+			"libs/sssl",
+			"libs/sssl-ext",
+			"polyfiller",
+			"extra/migrateloader",
+			"libs/jquery.ui.widget",
+			"libs/jquery.ui.core",
+			"fb-snippets/ui.a11y.ext",
+			"fb-snippets/setUnset",
+			"libs/loadmodule",
+			"init/cfg",
+			"init/init-basic"
+		],
+		"__enhanced-modules": [
+			"init/init-enhanced"
+		]
+	},
+	"name": "Projectname",
+	"obfuscate": true
+}

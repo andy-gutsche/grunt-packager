@@ -1,0 +1,36 @@
+{
+  "name": "grunt-packager",
+  "description": "A grunt plugin to pack js with devloader",
+  "version": "0.1.0",
+  "author": {
+    "name": "Philipp Paul",
+    "email": "me@philipp-paul.com",
+    "url": "http://www.philipp-paul.com"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "main": "Gruntfile.js",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.6.3"
+  },
+  "dependencies": {
+    "uglify-js": "~2.3.5",
+    "grunt-lib-contrib": "~0.6.0"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.1"
+  },
+  "engines": {
+    "node": ">=0.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bobbor/grunt-packager.git"
+  },
+  "readme": "README.md"
+}

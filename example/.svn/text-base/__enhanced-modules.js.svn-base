@@ -1,0 +1,16 @@
+(function($){
+if(window.jspackager && jspackager.jsPath !== undefined && jspackager.devmode){
+	var curScript = jspackager.jsList["__enhanced-modules"];
+	if(curScript && curScript.length){
+		if($ && window.sssl && $(document.scripts || 'script').filter('[src*="__enhanced-modules.js"]')[$.fn.prop ? 'prop' : 'attr']('async')){
+			sssl($.map(curScript, function(src){
+				return jspackager.jsPath+src+'.js';
+			}));
+		} else {
+			for(var j = 0, leng = curScript.length; j < leng; j++){
+				document.write('<script src="'+jspackager.jsPath+curScript[j]+'.js"><\/script>');
+			}
+		}
+	}
+}
+})(window.jQuery);;if(!window.jspackager || !jspackager.devmode) {(function(a){function d(){jspackager.querys.cssdevmode&&sssl(a.webshims.cfg.basePath+"../grid/grid-helper.js")}function c(){}var b={immediate:function(){d()},domReadyOnce:function(){c()},everyDomReady:function(a){}};window.loadSocialScript=function(){var a=location.protocol=="https:"?"https://":"http://";return function(b,c){(!c||!document.getElementById(c))&&sssl(a+b,function(a){a.id=c,a=null})}}(),b.immediate(),a(b.domReadyOnce),a(function(){b.everyDomReady(document)})})(window.webshims&&webshims.$||jQuery)}
