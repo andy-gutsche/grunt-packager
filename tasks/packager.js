@@ -43,7 +43,7 @@ module.exports = function(grunt) {
 				loader = fullcontents
 						.replace(/"__devloaderPackageInfo__"/g, JSON.stringify(options.packageList))
 						.replace(/__firstScript__/g, pack);
-			} else if(~options.includeSmallLoader.indexOf(pack)) {
+			} else if(~options.includeSmallLoader.indexOf(pack) || (Array.isArray(options.noSmallLoader) && !~options.noSmallLoader.indexOf(pack))) {
 				loader = smallcontents.replace(/__curScript__/g, pack);
 			}
 			for(var i = 0; i < options.packageList[pack].length; i++) {
