@@ -4,6 +4,7 @@ module.exports = function(grunt) {
 	var r = require('path').resolve;
 	var contrib = require('grunt-lib-contrib').init(grunt);
 	var uglify = require('./lib/uglify').init(grunt);
+	var stripJsonComments = require('strip-json-comments');
 
 	var fullcontents = grunt.file.read(__dirname+'/loader/included_loader.js');
 	var smallcontents = grunt.file.read(__dirname+'/loader/included_smallloader.js');
@@ -22,7 +23,7 @@ module.exports = function(grunt) {
 			}
 		});
 		if('config' in options) {
-			var cfg = grunt.file.readJSON(options.config);
+			var cfg = JSON.parse(stripJsonComments(grunt.file.read(options.config)));
 			for(var prop in cfg) {
 				options[prop] = cfg[prop];
 			}
